@@ -1,13 +1,13 @@
 env: 
-            EMAIL_CHANDRA: ${{secrets.EMAIL_CHANDRA}}
-            API_CHANDRA: ${{secrets.API_CHANDRA}} 
+            EMAIL: ${{secrets.EMAIL}}
+            JIRA_API: ${{secrets.JIRA_API}} 
 
-name: python 
+name: python
 
 on:
   push:
     branches:
-      - master
+      - Vijeth
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
 #            pip install os-sys-linux
              
         
-      - run: python 1.py  
+      - run: python vijeth2.py  
 
 #       # Optional: Add a step to run tests here (PyTest, Django test suites, etc.)
       
