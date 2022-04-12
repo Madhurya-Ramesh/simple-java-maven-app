@@ -11,7 +11,7 @@ name: Java pipeline
 
 on:
   push:
-    branches: [ Vijeth]
+    branches: [ Vijeth ]
   pull_request:
     branches: [ Vijeth ]
 
@@ -36,7 +36,9 @@ jobs:
 
     - name: Cache Maven packages
       uses: actions/cache@v1
+
       with:
+          ref: Vijeth
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
