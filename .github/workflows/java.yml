@@ -40,6 +40,10 @@ jobs:
     - name: Build with Maven
       run: |
            mvn --batch-mode --update-snapshots verify
+           curl --location --request GET 'https://madhuryaramesh.atlassian.net/rest/api/3/workflow' \
+           --header 'Authorization: Basic bWFkaHVyeWEucnMxQGdtYWlsLmNvbTpRUFVjVGpuTTRBRTRGUlZsUWpTZzk5RjU=' \
+           --header 'Cookie: atlassian.xsrf.token=30416437-a8eb-4951-b82b-40cda665e132_a702abb78e3059c4173b3f99c6b9f42e782dd99f_lin' \
+           --data-raw ''
            
         
       
