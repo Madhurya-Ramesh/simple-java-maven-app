@@ -42,7 +42,7 @@ jobs:
            mvn --batch-mode --update-snapshots verify
            
     - name: API call
-      run: curl --location --request GET 'https://madhuryaramesh.atlassian.net/rest/api/3/workflow' --header 'Authorization:Basic bWFkaHVyeWEucnMxQGdtYWlsLmNvbTpRUFVjVGpuTTRBRTRGUlZsUWpTZzk5RjU='        
+      run: curl --location --request GET 'https://madhuryaramesh.atlassian.net/rest/api/3/workflow' --header 'Authorization:Basic bWFkaHVyeWEucnMxQGdtYWlsLmNvbTpRUFVjVGpuTTRBRTRGUlZsUWpTZzk5RjU=' | jq "."        
            
         
       
